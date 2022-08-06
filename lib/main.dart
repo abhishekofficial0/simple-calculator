@@ -85,15 +85,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget buildButton(String buttonText) {
     return new Expanded(
-      child: OutlineButton(
-        child: Text(
-          buttonText,
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
+      child: TextButton(
+        child: Container(
+          padding: EdgeInsets.all(24),
+          child: Text(
+            buttonText,
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-        padding: EdgeInsets.all(24.0),
         onPressed: () => buttonPressed(buttonText),
       ),
     );
